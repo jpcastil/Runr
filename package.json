@@ -1,0 +1,29 @@
+{
+  "name": "runr",
+  "version": "1.0.0",
+  "description": "Runr app dependencies",
+  "main": "index.js",
+  "scripts": {
+    "start": "npm run lite",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lite":"lite-server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jpcastil/Runr.git"
+  },
+  "author": "Jesus Panales Castillo",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jpcastil/Runr/issues"
+  },
+  "homepage": "https://github.com/jpcastil/Runr#readme",
+  "dependencies": {
+    "bootstrap": "^4.3.1",
+    "jquery": "^3.4.1",
+    "popper.js": "^1.15.0"
+  },
+  "devDependencies": {
+    "lite-server": "^2.5.3"
+  }
+}
