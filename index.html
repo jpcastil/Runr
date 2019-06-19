@@ -9,8 +9,98 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
 	<title>Runr</title>
+	<style type="text/css">
+		
+	/* Centers the brand while mainataining the login to the left. Source: 
+	https://stackoverflow.com/questions/43487643/bootstrap-4-center-navbar-brand-with-collapse?noredirect=1&lq=1
+	*/
+	.navbar-brand{
+	        position: absolute;
+	        left: 50%;
+	        transform: translateX(-50%);
+	    }
+	/* used in order to make images responive. See bootsrap documentation for more */
+	img{
+		max-width: 100%;
+		height: auto;
+	}
+	
+	/* Classes used on the landing image, text, and App Store link */
+	.betterYou{
+		height:50%;
+	}
+	.landingTitle{
+		font-size: 5rem;
+	}
+	
+
+	</style>
 </head>
 <body>
+	
+
+	<!-- Nav Bar -->
+	<div class=" d-none d-sm-block"> 
+	<nav class=" navbar navbar-expand-xl navbar-light bg-light border-bottom border-dark">
+		<ul class="navbar-nav ml-auto">
+			<li class="navbar-item">
+				<a class="nav-link" href="#">Login</a>
+			</li>
+		</ul>
+		<a class="navbar-brand " href="#">Runr</a>
+	</nav>
+	</div>
+
+	<!-- Landing image, text, and App Store link -->
+	<div class="card bg-dark text-black border-0">
+	 	<img src="mountains2.jpg" class="card-img">
+		<div class="container-fluid card-img-overlay">
+		    <div class="betterYou row align-items-center justify-content-center">
+		    	<h5 class="landingTitle offset-5 col-7 text-center display-1">For the better you.</h5>
+		    </div>
+		    <div class="row  align-items-center justify-content-center">
+		    	<img class="col-1 offset-5 img-fluid text-center"  src="app.svg">
+		    </div>
+	  	</div>
+	</div>
+	
+	<!-- Space between tghe landing and the information -->
+	<br>
+	<br>
+
+	<!-- Features section -->
+	<div class="container">
+		<div class=" row">
+			<div class="col-6">
+				<h2 class=" text-center"> Runr-Only Features </h2>
+			</div>
+			<div class="col-6">
+				<ul class="list-unstyled">
+					<h3>Pace Makr</h3>
+					<li> Find and maximize your optimal pace. Utilizing location based calculations, our software calculates your current pace and tells you in real time to speed up or slow down. Alternatively, it may tell you tell you how far behind you are in real units. In seconds. In meters. In real time.
+					</li>
+					</br>
+					<h3>Trackr</h3>
+					<li >See the distance you ran and the time it took. You may see the current run, or you can see the calendar view of the month's to see your amazing progress.  </li>
+					</br>
+					<h3>Rendr</h3>
+					<li >Maybe you don't like the voice in the ear telling you to slow down. You can still watch your pace in hindsight. Using the tracking data during the run, we render a dot on a map that shows you run your path, speeding up and slowing down just like you did. </li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	</br>
+	<!-- Footer -->
+
+	<footer class="bg-dark">
+		<div class="container bg-dark">
+			<div class="row align-items-end justify-content-center ">
+				<div class="col-1"><a href="#" class="text-white-50 ">Contact</p></div>
+				<div class="col-1"><a href="#" class="text-white-50 ">Support</p></div>
+			</br>
+		</div>	
+	</footer>
+
 	<!-- Bootstrap JavaScript -->
 	<script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
     <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
