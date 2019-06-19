@@ -7,11 +7,11 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
 
     <!-- Bootstrap CSS -->
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
 	<title>Runr</title>
 	<style type="text/css">
-
-	/* Centers the brand while mainataining the login to the left. Source:
+		
+	/* Centers the brand while mainataining the login to the left. Source: 
 	https://stackoverflow.com/questions/43487643/bootstrap-4-center-navbar-brand-with-collapse?noredirect=1&lq=1
 	*/
 	.navbar-brand{
@@ -24,23 +24,46 @@
 		max-width: 100%;
 		height: auto;
 	}
-
+	
 	/* Classes used on the landing image, text, and App Store link */
+		/* Distance from top for Title */
 	.betterYou{
 		height:50%;
 	}
+		/* Title */
+	
+
+	@media (min-width: 0px) { /* 0 --> Mobile Small */
+		.landingTitle{
+		font-size: 3.5rem;
+		}
+	}
+	
+	@media (min-width: 375px) { /* Mobile M --> L */
+	.landingTitle{
+		font-size: 4rem;
+		}
+	}
+	@media (min-width: 425px) { /* Mobile L --> T*/
+	.landingTitle{
+		font-size: 4.5rem;
+		}
+	}
+	@media (min-width: 768px) { /* T --> Laptops */
 	.landingTitle{
 		font-size: 5rem;
+		}
 	}
 
 
 	</style>
 </head>
 <body>
-
+	
 
 	<!-- Nav Bar -->
-	<div class=" d-none d-sm-block">
+		<!-- Hide when small -->
+	<div class=" d-none d-sm-block"> 
 	<nav class=" navbar navbar-expand-xl navbar-light bg-light border-bottom border-dark">
 		<ul class="navbar-nav ml-auto">
 			<li class="navbar-item">
@@ -52,38 +75,52 @@
 	</div>
 
 	<!-- Landing image, text, and App Store link -->
+	
+
 	<div class="card bg-dark text-black border-0">
-	 	<img src="./images/mountains2.jpg" class="card-img">
+	 	<!-- Responsive Landing Images -->
+		<picture>
+			<source srcset="./images/mountains2.jpg" class="card-img" media="(min-width: 768px)"/>
+			<img src="./images/mountMobile.jpg" class="card-img">
+		</picture>
+
+		<!-- Title -->
 		<div class="container-fluid card-img-overlay">
 		    <div class="betterYou row align-items-center justify-content-center">
 		    	<h5 class="landingTitle offset-5 col-7 text-center display-1">For the better you.</h5>
 		    </div>
-		    <div class="row  align-items-center justify-content-center">
+		<!-- App Download Link-->
+		    <div class="row justify-content-center">
 		    	<img class="col-1 offset-5 img-fluid text-center"  src="./images/apple.svg">
 		    </div>
 	  	</div>
 	</div>
-
+	
 	<!-- Space between tghe landing and the information -->
-	<br>
-	<br>
+	<br >
+	
 
 	<!-- Features section -->
 	<div class="container">
 		<div class=" row">
-			<div class="col-6">
+			<div class="col-12 col-md-6">
+			<!-- Title of Features -->
+
 				<h2 class=" text-center"> Runr-Only Features </h2>
+
+			<hr class="d-md-none">
 			</div>
-			<div class="col-6">
+			<div class="col-12 col-md-6">
 				<ul class="list-unstyled">
-					<h3>Pace Makr</h3>
+			<!-- Subtitles w/ content -->
+					<h3 class="text-center text-md-left">Pace Makr</h3>
 					<li> Find and maximize your optimal pace. Utilizing location based calculations, our software calculates your current pace and tells you in real time to speed up or slow down. Alternatively, it may tell you tell you how far behind you are in real units. In seconds. In meters. In real time.
 					</li>
 					</br>
-					<h3>Trackr</h3>
+					<h3 class="text-center text-md-left">Trackr</h3>
 					<li >See the distance you ran and the time it took. You may see the current run, or you can see the calendar view of the month's to see your amazing progress.  </li>
 					</br>
-					<h3>Rendr</h3>
+					<h3 class="text-center text-md-left">Rendr</h3>
 					<li >Maybe you don't like the voice in the ear telling you to slow down. You can still watch your pace in hindsight. Using the tracking data during the run, we render a dot on a map that shows you run your path, speeding up and slowing down just like you did. </li>
 				</ul>
 			</div>
@@ -95,15 +132,15 @@
 	<footer class="bg-dark">
 		<div class="container bg-dark">
 			<div class="row align-items-end justify-content-center ">
-				<div class="col-1"><a href="#" class="text-white-50 ">Contact</p></div>
-				<div class="col-1"><a href="#" class="text-white-50 ">Support</p></div>
+				<div class="col-3 col-xs-2 col-md-1"><a href="#" class="text-white-50 ">Contact</p></div>
+				<div class="col-3 col-xs-2 col-md-1"><a href="#" class="text-white-50 ">Support</p></div>
 			</br>
-		</div>
+		</div>	
 	</footer>
 
 	<!-- Bootstrap JavaScript -->
-	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+	<script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
+    <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
 </body>
 </html>
