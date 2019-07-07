@@ -5,41 +5,44 @@
 	<meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/fefda2fffa.js"></script>
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
 	<title>Runr</title>
 	<style type="text/css">
-		
-	/* Centers the brand while mainataining the login to the left. Source: 
-	https://stackoverflow.com/questions/43487643/bootstrap-4-center-navbar-brand-with-collapse?noredirect=1&lq=1
-	*/
-	.navbar-brand{
-	        position: absolute;
-	        left: 50%;
-	        transform: translateX(-50%);
-	    }
+
+	.navbar-nav{
+        font-size: 1.4em;
+    }
+    .fill {
+        width: 100%;
+    }
+    .textC {
+        height: 50%;
+    }
+
 	/* used in order to make images responive. See bootsrap documentation for more */
 	img{
 		max-width: 100%;
 		height: auto;
 	}
-	
+
 	/* Classes used on the landing image, text, and App Store link */
 		/* Distance from top for Title */
 	.betterYou{
 		height:60%;
 	}
 		/* Title */
-	
+
 
 	@media (min-width: 0px) { /* 0 --> Mobile Small */
 		.landingTitle{
 		font-size: 3.5rem;
 		}
 	}
-	
+
 	@media (min-width: 375px) { /* Mobile M --> L */
 	.landingTitle{
 		font-size: 4rem;
@@ -49,6 +52,8 @@
 	.landingTitle{
 		font-size: 4.5rem;
 		}
+
+
 	}
 	@media (min-width: 768px) { /* T --> Laptops */
 	.landingTitle{
@@ -57,26 +62,26 @@
 	}
 
 
+
 	</style>
 </head>
 <body>
-	
+
 
 	<!-- Nav Bar -->
 		<!-- Hide when small -->
-	<div class=" d-none d-sm-block"> 
-	<nav class=" navbar navbar-expand-xl navbar-light bg-light border-bottom border-dark">
-		<ul class="navbar-nav ml-auto">
+	<div >
+	<nav class=" navbar navbar-expand-xl navbar-light bg-light border-bottom border-dark row justify-content-center">
+		<ul class="navbar-nav">
 			<li class="navbar-item">
-				<a class="nav-link" href="./login.html">Login</a>
+				<a class="nav-link" href="./login.html">Runr</a>
 			</li>
 		</ul>
-		<a class="navbar-brand " href="./index.html">Runr</a>
 	</nav>
 	</div>
 
 	<!-- Landing image, text, and App Store link -->
-	
+
 
 	<div class="card bg-dark text-black border-0">
 	 	<!-- Responsive Landing Images -->
@@ -96,48 +101,94 @@
 		    </div>
 	  	</div>
 	</div>
-	
+
 	<!-- Space between tghe landing and the information -->
 	<br >
-	
+
 
 	<!-- Features section -->
 	<div class="container">
-		<div class=" row">
-			<div class="col-12 col-md-6">
-			<!-- Title of Features -->
+        <h2 class=" text-center"> Runr Only Features</h2>
 
-				<h2 class=" text-center"> Runr-Only Features </h2>
+        <hr class="d-none d-md-block">
+        <hr class="d-md-none">
+		<div class="row">
 
-			<hr class="d-md-none">
-			</div>
-			<div class="col-12 col-md-6">
+		
+			<div class="col-12 ">
 				<ul class="list-unstyled">
-			<!-- Subtitles w/ content -->
-					<h3 class="text-center text-md-left">Pace Makr</h3>
-					<li> Find and maximize your optimal pace. Utilizing location based calculations, our software calculates your current pace and tells you in real time to speed up or slow down. Alternatively, it may tell you tell you how far behind you are in real units. In seconds. In meters. In real time.
-					</li>
-					</br>
-					<h3 class="text-center text-md-left">Trackr</h3>
-					<li >See the distance you ran and the time it took. You may see the current run, or you can see the calendar view of the month's to see your amazing progress.  </li>
-					</br>
-					<h3 class="text-center text-md-left">Rendr</h3>
-					<li >Maybe you don't like the voice in the ear telling you to slow down. You can still watch your pace in hindsight. Using the tracking data during the run, we render a dot on a map that shows you run your path, speeding up and slowing down just like you did. </li>
+                    <div class="d-flex-col d-md-flex ">
+                        <div class="fill p-4 ">
+                            <p class="text-center "><i class="fas fa-stopwatch fa-4x"></i></p>
+                        </div>
+                        <div class="fill p-12 p-md-4">
+        					<h3 class="text-center text-md-left">Pace Makr</h3>
+        					<li> Find and maximize your optimal pace. Utilizing your location and time, our software calculates your current pace and tells you in real time to speed up or slow down. Alternatively, it may tell you tell you your current pace.
+    					    </li>
+                        </div>
+                    </div>
+                    <div class="d-flex-col d-md-flex ">
+                        <div class="fill p-4 ">
+                            <p class="text-center "><i class="fas fa-scroll fa-4x"></i></p>
+                        </div>
+                        <div class="fill p-12 p-md-4">
+        					<h3 class="text-center text-md-left">Trackr</h3>
+        					<li> See the distance you ran and the time it took. You may see the current run, or the history of all your runs.
+    					    </li>
+                        </div>
+                    </div>
+
+                    <div class="d-flex-col d-md-flex ">
+                        <div class="fill p-4">
+                            <p class="text-center "><i class="fas fa-map-marked-alt fa-4x"></i></p>
+                        </div>
+                        <div class="fill p-12 p-md-4">
+        					<h3 class="text-center text-md-left">Rendr</h3>
+        					<li>Using the tracking data collected during the run, we render a path on a map. But what if you ran in circles? Easy. Rendr allows you to render the path in real time, speeding up and slowing down just like you did.
+                        </div>
+                    </div>
+
 				</ul>
 			</div>
 		</div>
-	</div>
+
 	</br>
+
+    <!-- Graph Section -->
+    <div class= "fill">
+        <h2 class="text-center"> Pace Matters </h2>
+    </div>
+    <br />
+
+    <div class="container">
+  		<div class="row">
+    		<div class="col-12 col-md-6 text-center">
+    			<img src="./images/actual.png">
+     		 	<h4>Pace</h4>
+     		 	<p> Here is a typical pace for a run. You start out a bit too fast, cruise at a slower pace, then push it one last time at the end. The result? You didn't meet your pace, and you're likely out of breath
+    		</div>	
+    		<div class="col-12 col-md-6 text-center">
+    			<img src="./images/average.png">
+     		 	<h4>Pace with Runr</h4>
+     		 	<p> Runr keeps you in check to meet your optimal pace. Nothing over or under. It's that easy.</p>
+    		</div>	
+ 		</div>
+
+	</div>
+
+
+
+    </div>
 	<!-- Footer -->
 
 	<footer class="bg-dark">
 		<div class="container-fluid bg-dark">
 			<div class="row">
-				<div class="pt-2 col-6 text-right"><a href="#" class="text-muted ">Contact</p></div>
-				<div class="pt-2 col-6 text-left"><a href="#" class="text-muted">Support</p></div>
+				<div class="pt-2 col-6 text-right"><a href="#" class="text-muted " ahref="https://www.linkedin.com/in/jesus-panales-castillo-00bb96127/" style="color:grey;">Contact</a></p></div>
+				<div class="pt-2 col-6 text-left"><a href="#" class="text-muted"><a href="https://github.com/jpcastil/RunrApp" style="color:grey;">Support</a></p></div>
 
 			</br>
-		</div>	
+		</div>
 	</footer>
 
 	<!-- Bootstrap JavaScript -->
